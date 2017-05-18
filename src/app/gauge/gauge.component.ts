@@ -42,7 +42,7 @@ export class GaugeComponent implements OnInit {
 
   @Input()
   set segments(segments: GaugeSegment[]) {
-    this.segmentsLoaded = false;
+    //this.segmentsLoaded = false;
     this.sortedSegments = this.sortSegments(segments);
 
     // wait a bit and start animation
@@ -51,7 +51,7 @@ export class GaugeComponent implements OnInit {
       0);
   }
   sortedSegments: GaugeSegment[];
-  segmentsLoaded = false;
+  segmentsLoaded = true;
 
   isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
 
